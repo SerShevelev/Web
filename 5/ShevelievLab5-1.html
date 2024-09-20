@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Опис документу - інформація про студента, його хобі та програмування.">
+    <meta name="keywords" content="програмування, студент, C++, JavaScript, IT">
+    <title>Lab1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 5px;
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            background-color: rgb(255, 221, 177);
+            text-decoration: none;
+        }
+
+        body {
+            margin-top: 100px;
+        }
+
+        pre {
+            text-align: left; 
+            background-color: #ffe8d3; 
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .signature {
+            font-style: italic;
+            text-align:right;
+            margin-top: 20px;
+        }
+
+        .signature u {
+            text-decoration: underline;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6%;
+            background-color:  rgb(255, 221, 177);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid white;
+        }
+
+        .menu .logo {
+            margin-left: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .menu ul li {
+            margin-left: 20px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+        }
+
+        .menu ul li a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+        
+        h2 {
+            font-size: 24px;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #f3c68a;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 30px;
+            color: black;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #F0B47C;
+        }
+
+        a{
+            color: black;
+            font-size: large;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #ffa277;
+        }
+    </style>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="menu">
+        <div class="logo">
+            <img src="logo.png" alt="Логотип" height="50">
+        </div>
+        <ul>
+            <li><a href="#about">Про себе</a></li>
+            <li><a href="ShevelievLab5-2.html">Гіперпосилання</a></li>
+        </ul>
+    </div>
+
+    <div class="main-block">
+        <h1 id="about">Про себе</h1>
+        <p>
+            Сергій Шевелєв, студент 3 курсу, вивчаю програмування
+            та прагну досягти професіоналізму в цій сфері. 
+            <b>Працюю над проєктами з використанням C++ і JavaScript.</b> 
+            <i>Шукаю можливості для розвитку та нові виклики в IT.</i>
+        </p>
+
+        <h2>Моє хобі</h2>
+        <p>
+            Моє хобі – це програмування та створення різних проєктів. 
+            <u>Я захоплююся вивченням нових мов програмування і технологій,</u>
+            розвиваю свої навички в C++, JavaScript. 
+            У вільний час експериментую з написанням простих ігор та додатків.
+        </p>
+
+        <h2>Програмування</h2>
+        <pre>
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}
+        </pre>
+
+        <div class="signature">
+            <i><u><a href="mailto:darkusfell@gmail.com">Студент групи 305-ТН Сергій Шевелєв</a>.</u></i>
+        </div>
+    </div>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">&#8679;</button>
+    
+</body>
+</html>

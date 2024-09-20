@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Опис документу - інформація про студента, його хобі та програмування.">
+    <meta name="keywords" content="програмування, студент, C++, JavaScript, IT">
+    <title>Lab1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 5px;
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            background-color: rgb(255, 221, 177);
+            text-decoration: none;
+        }
+
+        body {
+            margin-top: 100px;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6%;
+            background-color:  rgb(255, 221, 177);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid white;
+        }
+
+        .menu .logo {
+            margin-left: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .menu ul li {
+            margin-left: 20px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+        }
+
+        .menu ul li a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .main-block {
+            text-align: left;
+            margin: 20px;
+        }
+
+        .main-block h2 {
+            font-size: 28px;
+        }
+
+        .main-block ul {
+            list-style-type: none;
+        }
+
+        .main-block ul li {
+            margin-bottom: 10px;
+        }
+
+        .main-block ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #f3c68a;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 30px;
+            color: black;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #F0B47C;
+        }
+
+        a{
+            color: black;
+            font-size: large;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #ffa277;
+        }
+    </style>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <!-- Меню -->
+    <div class="menu">
+        <div class="logo">
+            <img src="logo.png" alt="Логотип" height="50"> <!-- Логотип зліва -->
+        </div>
+        <ul>
+            <li><a href="ShevelievLab5-1.html">Про себе</a></li>
+            <li><a href="ShevelievLab5-2.html">Гіперпосилання</a></li>
+        </ul>
+    </div>
+
+    <div class="main-block">
+        <h2>Корисні пошукові сервіси</h2>
+        <ul>
+            <li>
+                <b>Google</b> - <a href="https://www.google.com" target="_blank">link</a> 
+                <p>Потужний пошуковий сервіс, широко використовуваний в Україні для пошуку будь-якої інформації.</p>
+            </li>
+            <li>
+                <b>DuckDuckGo</b> - <a href="https://duckduckgo.com" target="_blank">link</a>
+                <p>Безпечний пошуковий сервіс, що не відслідковує особисті дані користувачів. Корисний для конфіденційних запитів.</p>
+            </li>
+            <li>
+                <b>Bing</b> - <a href="https://www.bing.com" target="_blank">link</a>
+                <p>Альтернатива Google, від Microsoft. В Україні використовується для пошуку інформації та медіаресурсів.</p>
+            </li>
+            <li>
+                <b>Yahoo</b> - <a href="https://www.yahoo.com" target="_blank">link</a>
+                <p>Інформаційний портал та пошуковий сервіс, популярний серед студентів для новин та дослідження.</p>
+            </li>
+            <li>
+                <b>Yandex</b> - <a href="https://www.yandex.ua" target="_blank">link</a>
+                <p>Російський пошуковий сервіс, доступний в Україні, але використовується рідше через обмеження.</p>
+            </li>
+            <li>
+                <b>Wolfram Alpha</b> - <a href="https://www.wolframalpha.com" target="_blank">link</a>
+                <p>Пошукова система для наукових обчислень та академічних запитів. Підходить для студентів технічних напрямків.</p>
+            </li>
+            <li>
+                <b>ResearchGate</b> - <a href="https://www.researchgate.net" target="_blank">link</a>
+                <p>Платформа для науковців, де можна знайти наукові статті та матеріали, корисна для студентів і аспірантів.</p>
+            </li>
+            <li>
+                <b>Google Scholar</b> - <a href="https://scholar.google.com" target="_blank">link</a>
+                <p>Пошукова система для наукових статей і публікацій. Використовується студентами для дослідницької роботи.</p>
+            </li>
+            <li>
+                <b>Scopus</b> - <a href="https://www.scopus.com" target="_blank">link</a>
+                <p>База даних для академічних досліджень. Використовується в основному для пошуку наукових статей та журналів.</p>
+            </li>
+            <li>
+                <b>PubMed</b> - <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank">link</a>
+                <p>База даних біомедичних публікацій та наукових досліджень у галузі медицини.</p>
+            </li>
+        </ul>
+    </div>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">&#8679;</button>
+    
+</body>
+</html>
