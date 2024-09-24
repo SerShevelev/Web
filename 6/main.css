@@ -1,0 +1,394 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Меню всегда поверх */
+}
+
+.menu .logo {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+.menu ul li {
+    position: relative;
+    padding: 0 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.menu ul li a:hover {
+    color: #ffa277;
+}
+
+.menu ul li a span {
+    display: inline-block;
+    margin-left: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%; /* Форма по умолчанию - круг */
+}
+
+/* Индивидуальные стили для фигур */
+.circle {
+    border-radius: 50%;
+}
+
+.square {
+    border-radius: 0; /* Квадрат */
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #fff; /* Треугольник */
+}
+
+/* Стили для скроллбара */
+.scrollbar {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 20px 0; /* Убираем задний фон */
+}
+
+.scroll-item {
+    flex: 0 0 150px;
+    height: 150px;
+    position: relative; /* Для позиционирования дочерних элементов */
+    overflow: hidden; /* Скрываем лишнее содержимое */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.scroll-item img {
+    width: 100%; /* Заполняем всю карточку */
+    height: 100%; /* Заполняем всю карточку */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+    transition: transform 0.3s ease;
+}
+
+.scroll-item:hover {
+    transform: scale(1.1); /* Увеличиваем карточку при наведении */
+}
+
+/* Стили для заливки */
+.scroll-item::after {
+    content: ""; /* Содержимое пустое по умолчанию */
+    position: absolute;
+    bottom: 0; /* Прикрепляем к нижней части */
+    width: 100%;
+    height: 30%; /* Заливаем 30% снизу */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    opacity: 0; /* Изначально невидимо */
+    transition: opacity 0.3s; /* Плавный переход для появления */
+}
+
+/* Показать заливку и текст при наведении */
+.scroll-item:hover::after {
+    opacity: 1; /* Показать белый фон при наведении */
+}
+
+.scroll-item::after {
+    display: flex; /* Используем flex для центрирования текста */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    align-items: center; /* Центрируем текст по вертикали */
+    font-size: 16px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    text-align: center; /* Центрирование текста */
+}
+
+/* Имена для каждого элемента */
+.scroll-item:nth-child(1)::after {
+    content: "Ваня";
+}
+
+.scroll-item:nth-child(2)::after {
+    content: "Дима";
+}
+
+.scroll-item:nth-child(3)::after {
+    content: "Мурат";
+}
+
+.scroll-item:nth-child(4)::after {
+    content: "Стас и Дарина";
+}
+
+.scroll-item:nth-child(5)::after {
+    content: "Илья";
+}
+
+.scroll-item:nth-child(6)::after {
+    content: "Андрей";
+}
+
+/* Основной текст */
+.main-block {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Центрирование по горизонтали */
+    background-color: #f9f9f9; /* Легкий фон */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    line-height: 1.8; /* Улучшенная читабельность */
+    text-align: left; /* Текст слева для улучшенной структуры */
+}
+
+.main-block h1 {
+    font-size: 32px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center; /* Центрируем заголовок */
+}
+
+.main-block h2 {
+    font-size: 28px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.main-block p {
+    font-size: 18px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Панель с кодом в виде карты */
+pre {
+    text-align: left;
+    background-color: #ffe8d3;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 16px;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto; /* Центрирование */
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease, height 0.5s ease;
+    height: 40px; /* Высота до наведения */
+    background-color: #ddd; /* Цвет карты до наведения */
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+pre::before {
+    content: "Пример кода C++"; /* Текст на карте до раскрытия */
+    color: #333;
+}
+
+pre:hover {
+    height: 200px; /* Высота при наведении */
+    transform: scale(1.05); /* Небольшое увеличение */
+}
+
+pre:hover::before {
+    content: ""; /* Убираем текст при наведении */
+}
+
+pre:hover code {
+    display: block; /* Показываем код */
+}
+
+pre code {
+    display: none; /* Скрываем код до наведения */
+    text-align: left; 
+    padding: 15px;
+    border-radius: 8px;
+    color: #444;
+    font-size: 16px;
+}
+
+/* Современные ссылки */
+a {
+    color: #333; /* Темный цвет текста */
+    text-decoration: none; /* Без подчеркивания */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавные переходы */
+    font-weight: 500;
+}
+
+a:hover {
+    color: #ffa277; /* Цвет при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Выбор современного шрифта */
+body {
+    font-family: 'Inter', sans-serif; /* Используем современный шрифт */
+    background-color: #f4f4f4;
+    color: #333; /* Основной цвет текста */
+    line-height: 1.6;
+}
+
+/* Подключение другого шрифта для заголовков */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Более выделяющийся шрифт для заголовков */
+    color: #555;
+}
+
+/* Перенос текста */
+p, h1, h2 {
+    word-wrap: break-word; /* Перенос текста */
+    margin-bottom: 20px;
+}
+
+/* Цвет выделения текста */
+::selection {
+    background-color: #ffa277; /* Цвет фона при выделении текста */
+    color: white; /* Цвет текста при выделении */
+}
+
+/* Стилизация скроллбара */
+::-webkit-scrollbar {
+    width: 8px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Фон полосы скроллбара */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aaa; /* Цвет бегунка */
+    border-radius: 10px; /* Закругленные углы */
+    border: 2px solid #f0f0f0; /* Пространство между бегунком и треком */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888; /* Цвет бегунка при наведении */
+}
+
+ /* Основные стили для карты */
+ .map-container {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    border: 2px solid #333;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.map-container {
+    width: 400px;
+    height: 300px;
+    margin: 40px auto;
+    position: relative;
+    border: 2px solid #333;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.map-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.map-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.location-description {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Стиль для отделения карты */
+.map-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+ /* Кнопка поднятия по странице */
+ .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Правый нижний угол */
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    z-index: 999; /* Всегда поверх */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-to-top:hover {
+    background-color: #555;
+}
