@@ -1,0 +1,340 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu .logo {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.menu ul li a:hover {
+    color: #ffa277;
+}
+
+.menu ul li:nth-child(1) a::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.menu ul li:nth-child(2) a::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.menu ul li:nth-child(3) a::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #fff;
+    margin-right: 10px;
+}
+
+.scrollbar {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.scroll-item {
+    flex: 0 0 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.scroll-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.scroll-item:hover {
+    transform: scale(1.1);
+}
+
+.scroll-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.scroll-item:hover::after {
+    opacity: 1;
+}
+
+.scroll-item::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+.scroll-item:nth-child(1)::after { content: "Ваня"; }
+.scroll-item:nth-child(2)::after { content: "Дима"; }
+.scroll-item:nth-child(3)::after { content: "Мурат"; }
+.scroll-item:nth-child(4)::after { content: "Стас и Дарина"; }
+.scroll-item:nth-child(5)::after { content: "Илья"; }
+.scroll-item:nth-child(6)::after { content: "Андрей"; }
+
+.main-block {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.main-block h1 {
+    font-size: 32px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-block h2 {
+    font-size: 28px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.main-block p {
+    font-size: 18px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+pre {
+    text-align: left;
+    background-color: #ffe8d3;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 16px;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.5s ease;
+    height: 40px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+pre::before {
+    content: "Пример кода C++";
+    color: #333;
+}
+
+pre:hover {
+    height: 200px;
+}
+
+pre:hover::before {
+    content: "";
+}
+
+pre:hover code {
+    display: block;
+}
+
+pre code {
+    display: none;
+    text-align: left;
+    padding: 15px;
+    border-radius: 8px;
+    color: #444;
+    font-size: 16px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #ffa277;
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+}
+
+p, h1, h2 {
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+::selection {
+    background-color: #ffa277;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+    border: 2px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+.map-container {
+    width: 400px;
+    height: 300px;
+    margin: 40px auto;
+    position: relative;
+    border: 2px solid #333;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.map-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.map-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.location-description {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.map-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-to-top:hover {
+    background-color: #555;
+}
