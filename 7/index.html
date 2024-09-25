@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab7</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="user-form">
+            <h1>Анкета</h1>
+            
+            <label for="surname">Прізвище</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <label for="fullname">Ім'я, по батькові</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="dob">Число і рік народження</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="address">Домашня адреса</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="work">Місце навчання (роботи)</label>
+            <input type="text" id="work" name="work" required>
+
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="interests">Область інтересів</label>
+            <textarea id="interests" name="interests" rows="3" placeholder="Опишіть ваші інтереси..." onblur="shortenText()" required></textarea>
+
+            <div class="buttons">
+                <button type="reset">Відмінити введення</button>
+                <button type="submit">Далі</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function shortenText() {
+            const interests = document.getElementById('interests');
+            const fullText = interests.value;
+
+            if (fullText.length > 30) {
+                interests.value = fullText.substring(0, 30) + '...';
+            }
+        }
+
+        // Если пользователь снова кликнет на текстовое поле, вернуть полный текст
+        document.getElementById('interests').addEventListener('focus', function () {
+            const interests = document.getElementById('interests');
+            interests.value = interests.getAttribute('data-full-text') || interests.value;
+        });
+
+        document.getElementById('interests').addEventListener('input', function () {
+            const interests = document.getElementById('interests');
+            interests.setAttribute('data-full-text', interests.value); // Сохраняем полный текст как атрибут
+        });
+    </script>
+</body>
+</html>

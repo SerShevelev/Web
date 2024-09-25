@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab7</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="user-form">
+            <h1>Анкета</h1>
+            
+            <!-- Номер банківського рахунку -->
+            <label for="bank-account">Номер банківського рахунку</label>
+            <input type="text" id="bank-account" name="bank-account" required>
+
+            <!-- Особистий номер -->
+            <label for="personal-id">Особистий номер</label>
+            <input type="text" id="personal-id" name="personal-id" required>
+
+            <!-- Список товарів -->
+            <label for="product-list">Список товарів</label>
+            <details>
+                <summary>Виберіть товари</summary>
+                <div id="product-list">
+                    <div>
+                        <label for="item1">Товар 1</label>
+                        <button type="button" class="product-button" id="item1">Вибрати</button>
+                    </div>
+                    <div>
+                        <label for="item2">Товар 2</label>
+                        <button type="button" class="product-button" id="item2">Вибрати</button>
+                    </div>
+                    <div>
+                        <label for="item3">Товар 3</label>
+                        <button type="button" class="product-button" id="item3">Вибрати</button>
+                    </div>
+                    <div>
+                        <label for="item4">Товар 4</label>
+                        <button type="button" class="product-button" id="item4">Вибрати</button>
+                    </div>
+                    <div>
+                        <label for="item5">Товар 5</label>
+                        <button type="button" class="product-button" id="item5">Вибрати</button>
+                    </div>
+                    <div>
+                        <label for="item6">Товар 6</label>
+                        <button type="button" class="product-button" id="item6">Вибрати</button>
+                    </div>
+                    <div>
+                        <label for="item7">Товар 7</label>
+                        <button type="button" class="product-button" id="item7">Вибрати</button>
+                    </div>
+                    <div>
+                        <label for="item8">Товар 8</label>
+                        <button type="button" class="product-button" id="item8">Вибрати</button>
+                    </div>
+                </div>
+            </details>
+
+            <!-- Коментарі -->
+            <label for="comments">Коментарі</label>
+            <textarea id="comments" name="comments" rows="3" placeholder="Введіть коментарі..." required></textarea>
+
+            <!-- Вид оплати -->
+            <label for="payment-type">Вид оплати</label>
+            <div class="payment-options">
+                <div class="payment-option">
+                    <input type="radio" id="cash" name="payment-type" value="cash" required>
+                    <label for="cash">
+                        <img src="img/money.png" alt="Cash Payment" class="payment-icon">
+                        <span>На місці</span>
+                    </label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="card" name="payment-type" value="card" required>
+                    <label for="card">
+                        <img src="img/card.png" alt="Card Payment" class="payment-icon">
+                        <span>Картой</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="reset">Відмінити введення</button>
+                <button type="submit">Далі</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript для переключения состояния кнопок
+        const buttons = document.querySelectorAll('.product-button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active'); // Переключаем класс 'active'
+            });
+        });
+    </script>
+</body>
+</html>
