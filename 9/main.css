@@ -1,0 +1,63 @@
+/* General Styling for all blocks */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center; /* Centering all text */
+}
+
+/* Menu styling */
+.menu {
+    background-color: #34495e;
+    padding: 10px;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu p {
+    margin: 0;
+}
+
+/* Block 1: Heading styles */
+.heading-primary {
+    font-size: 2em;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.heading-secondary {
+    font-size: 1.75em;
+    color: #16a085;
+    font-weight: bold;
+}
+
+.heading-tertiary {
+    font-size: 1.5em;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Block 2: Custom text classes */
+.section-title {
+    font-size: 1.75em;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.body-text {
+    font-size: 1em;
+    color: #2c3e50;
+}
+
+.note {
+    font-size: 0.875em;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Block 3: Small text and menu styles */
+.small {
+    font-size: 0.75em;
+    color: #95a5a6;
+}

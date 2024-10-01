@@ -1,0 +1,109 @@
+/* Общее оформление для всех страниц */
+* {
+    box-sizing: border-box; /* Упрощение работы с отступами и размерами */
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Устанавливаем высоту для корректного выравнивания */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Устанавливаем минимальную высоту на всю высоту окна */
+}
+
+header, footer {
+    background-color: #f1f1f1; /* Цвет фона для заголовка и футера */
+    padding: 20px; /* Внутренние отступы */
+    text-align: center; /* Центрируем текст */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #333;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #4A90E2;
+}
+
+.main {
+    flex: 1; /* Позволяет блоку занимать оставшееся пространство */
+    background-image: url('img/1.jpg'); /* Путь к вашему изображению */
+    background-size: cover; /* Для покрытия всей области блока */
+    background-repeat: no-repeat; /* Изображение не повторяется */
+    background-position: center; /* Центрируем изображение */
+    padding: 20px; /* Внутренние отступы */
+    color: #333; /* Цвет текста */
+    text-align: justify; /* Выравнивание текста по ширине */
+}
+
+
+
+p {
+    margin: 20px 0;
+    text-align: justify;
+    text-indent: 20px;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: auto; /* Позволяет футеру оставаться внизу */
+}
+
+/* Оформление ссылок для страницы 3 */
+a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #9400D3;
+}
+
+a:hover {
+    color: #FF4500;
+}
+
+a:active {
+    color: #32CD32;
+}
+
+/* Убедимся, что footer всегда внизу */
+html {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}

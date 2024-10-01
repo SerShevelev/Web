@@ -1,0 +1,62 @@
+/* Стили для первой части задания */
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.blue {
+    color: blue;
+    font-style: italic;
+}
+
+.green {
+    color: green;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #f0f0f0;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+div {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14pt;
+    color: black;
+    font-style: italic;
+    text-align: justify;
+    text-indent: 2%;
+}
+
+#heading {
+    font-size: 35pt;
+    color: darkred;
+    font-weight: bold;
+}
+
+#description {
+    font-size: 14pt;
+    color: black;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-align: justify;
+    text-indent: 2%;
+}
+
+ul li a {
+    font-size: 20pt;
+    color: purple;
+    font-weight: bold;
+}
