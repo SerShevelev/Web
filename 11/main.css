@@ -1,0 +1,112 @@
+/* Общее оформление для всех страниц */
+* {
+    box-sizing: border-box; /* Упрощение работы с отступами и размерами */
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Устанавливаем высоту для корректного выравнивания */
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef; /* Более светлый фон для общего вида */
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Устанавливаем основной цвет текста */
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Устанавливаем минимальную высоту на всю высоту окна */
+}
+
+header, footer {
+    background-color: #f8f9fa; /* Более светлый цвет фона */
+    padding: 25px; /* Увеличиваем внутренние отступы */
+    text-align: center; /* Центрируем текст */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
+}
+
+h1 {
+    font-size: 2.2rem; /* Уменьшаем размер заголовка */
+    color: #333;
+    font-weight: 700; /* Увеличиваем насыщенность */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: #3a3a3a; /* Чуть более светлый цвет */
+}
+
+nav a {
+    margin: 0 20px;
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #6c757d; /* Используем более нейтральный цвет при наведении */
+}
+
+.main {
+    flex: 1;
+    background-image: url('img/1.jpg'); /* Путь к вашему изображению */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 25px; /* Увеличиваем внутренние отступы */
+    color: #4d4d4d; /* Темно-серый цвет текста */
+    text-align: justify;
+    backdrop-filter: brightness(0.95); /* Легкий эффект затемнения */
+}
+
+p {
+    margin: 25px 0;
+    text-align: justify;
+    text-indent: 25px;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.8; /* Увеличенный межстрочный интервал для читабельности */
+}
+
+footer {
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: #6c757d; /* Серый цвет текста для футера */
+}
+
+/* Оформление ссылок для страницы 3 */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #6f42c1;
+}
+
+a:hover {
+    color: #e57373; /* Теплый красный для hover эффекта */
+}
+
+a:active {
+    color: #28a745;
+}
+
+/* Убедимся, что footer всегда внизу */
+html {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
