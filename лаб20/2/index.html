@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Електромережа</title>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #1e1e2f;
+      color: #f5f5f5;
+    }
+    h1 {
+      color: #84d1ff;
+    }
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+      max-width: 600px;
+    }
+    label {
+      flex: 1;
+      padding-right: 1rem;
+    }
+    input {
+      flex: 1;
+      padding: 0.5rem;
+    }
+    #result {
+      margin-top: 2rem;
+      background: #2a2a3a;
+      padding: 1rem;
+      border-radius: 5px;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <h1>Конфігуратор Електромережі</h1>
+  <div class="form-group">
+    <label for="solar">Сонячні панелі (МВт вдень на 1 шт):</label>
+    <input type="number" id="solar" value="3" min="1" max="5" />
+  </div>
+  <div class="form-group">
+    <label for="powerplant">Потужність електростанції (МВт):</label>
+    <input type="number" id="powerplant" value="800" min="1" max="1000" />
+  </div>
+  <div class="form-group">
+    <label for="apartments">Кількість квартир у будинку:</label>
+    <input type="number" id="apartments" value="200" min="1" max="400" />
+  </div>
+  <div class="form-group">
+    <label for="linePower">Потужність лінії електропередачі (МВт):</label>
+    <input type="number" id="linePower" value="500" min="1" max="1000" />
+  </div>
+  <div class="form-group">
+    <label for="linePrice">Ціна за МВт (грн):</label>
+    <input type="number" id="linePrice" value="2" min="1" max="10000" />
+  </div>
+  <button onclick="calculate()">Розрахувати</button>
+
+  <div id="result"></div>
+</body>
+</html>
